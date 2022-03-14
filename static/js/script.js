@@ -4,7 +4,7 @@ for(let i=0;i<allimages.length;i++){
 }
 for(let i=0;i<allimages.length;i++){
     let image = allimages[i];
-    image.addEventListener("click" , ()=>{
-        image.classList.add("selected");
+    image.addEventListener("click", ()=>{
+        image.classList.toggle("selected");
     })
 }
