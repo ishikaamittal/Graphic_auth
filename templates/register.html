@@ -51,108 +51,32 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-5 ">
-                                    {% comment %} <div class="lui_9okt6">
-										<div class="_loh_revu97">
-											<div id="reviews-login">
-											
-												<!-- Single Reviews -->
-												<div class="_loh_r96">
-													<div class="_bloi_quote"><i class="fa fa-quote-left"></i></div>
-													<div class="_loh_r92">
-														<h4>Good Services</h4>
-													</div>
-													<div class="_loh_r93">
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>	
-													</div>	
-													<div class="_loh_foot_r93">
-														<h4>Shilpa D. Setty</h4>
-														<span>Team Leader</span>
-													</div>												
-												</div>
-												
-												<!-- Single Reviews -->
-												<div class="_loh_r96">
-													<div class="_bloi_quote"><i class="fa fa-quote-left"></i></div>
-													<div class="_loh_r92">
-														<h4>Good Services</h4>
-													</div>
-													<div class="_loh_r93">
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>	
-													</div>	
-													<div class="_loh_foot_r93">
-														<h4>Adam Wilsom</h4>
-														<span>Mak Founder</span>
-													</div>												
-												</div>
-												
-												<!-- Single Reviews -->
-												<div class="_loh_r96">
-													<div class="_bloi_quote"><i class="fa fa-quote-left"></i></div>
-													<div class="_loh_r92">
-														<h4>Customer Support</h4>
-													</div>
-													<div class="_loh_r93">
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>	
-													</div>	
-													<div class="_loh_foot_r93">
-														<h4>Kunal M. Wilsom</h4>
-														<span>CEO & Founder</span>
-													</div>												
-												</div>
-												
-												<!-- Single Reviews -->
-												<div class="_loh_r96">
-													<div class="_bloi_quote"><i class="fa fa-quote-left"></i></div>
-													<div class="_loh_r92">
-														<h4>Ultimate Services</h4>
-													</div>
-													<div class="_loh_r93">
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>	
-													</div>	
-													<div class="_loh_foot_r93">
-														<h4>Mark Jugermark</h4>
-														<span>MCL Founder</span>
-													</div>												
-												</div>
-												<!-- Single Reviews -->
-												<div class="_loh_r96">
-													<div class="_bloi_quote"><i class="fa fa-quote-left"></i></div>
-													<div class="_loh_r92">
-														<h4>Item Support</h4>
-													</div>
-													<div class="_loh_r93">
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>	
-													</div>	
-													<div class="_loh_foot_r93">
-														<h4>Kirti Washinton</h4>
-														<span>Web Designer</span>
-													</div>												
-												</div>
-											
-											</div>
-                                    </div> {% endcomment %}
-                                    <div class="images">
-                                        <div class="image one" id = "1">img 1</div>
-                                        <div class="image two" id = "2">img 2</div>
-                                        <div class="image three" id = "3">img 3</div>
-                                        <div class="image four" id = "4">img 4</div>
-                                        <div class="image five" id = "5">
-                                            img 5
+                                <div class="col-lg-6 col-md-6 mt-5 ">
+                                 
+ 							   <input class="input" style="display:none;" type="text" id ="password" >
+                                    <div class="images mt-5">
+                                        <div class="image one col-3" id = "1"></div>
+                                        <div class="image two col-3" id = "2"></div>
+                                        <div class="image three col-3" id = "3"></div>
+                                        <div class="image four col-3" id = "4"></div>
+                                        <div class="image five col-3" id = "5">
+                                            
                                         </div>
-                                        <div class="image six" id = "6">
-                                            img 6
+                                        <div class="image six col-3" id = "6">
+                                            
                                         </div>
-                                        <div class="image seven" id = "7">
-                                            img 7
+                                        <div class="image seven col-3" id = "7">
+                                            
                                         </div>
-                                        <div class="image eight" id = "8">
-                                            img 8
+                                        <div class="image eight col-3"  id = "8">
+                                            
                                         </div>
-                                        <div class="image nine" id = "9">
-                                            img 9
+                                        <div class="image nine col-3" id = "9">
+                                         
                                         </div>
                                     </div>
+                                    <button class="entervalue" id="enterpass" onclick="inputcheck()"> Submit </button>
+                                    <button class="refresh-button" onclick="refresh()">refresh</button>
                                     <script src="https://cdn.jsdelivr.net/npm/short-unique-id@latest/dist/short-unique-id.min.js"></script>
                                     <script>
 										let uid = new ShortUniqueId();
@@ -182,6 +106,18 @@
     <script src="{%static '/js/counterup.min.js'%}"></script>
     <script src="{%static '/js/custom.js'%}"></script>
     <script src="{%static '/js/script.js'%}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+    <script>
+        let images = document.querySelectorAll(".image");
+        jQuery.fn.shuffle = function () {
+            for (var i = 0; i < images.length; i++) {
+                $(this[i]).before($(this[Math.floor(Math.random() * this.length)]));
+            }
+            return this;
+        };
+    $('.image').shuffle();
+    </script>
     <!-- ============================================================== -->
     <!-- This page plugins -->
     <!-- ============================================================== -->

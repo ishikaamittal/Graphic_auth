@@ -4,9 +4,6 @@ let submitbutton = document.querySelector(".entervalue");
 let ip = document.querySelector(".input");
 let arr = [];
 for(let i=0;i<allimages.length;i++){
-    allimages[i].innerHTML = allimages[i].id;
-}
-for(let i=0;i<allimages.length;i++){
     let image = allimages[i];
     image.addEventListener("click", ()=>{
         if(arr.includes(image.id)){
