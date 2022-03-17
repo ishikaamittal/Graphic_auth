@@ -1,8 +1,9 @@
 let allimages = document.querySelectorAll(".image");
-let submitbutton = document.querySelector(".entervalue");
+// let submitbutton = document.querySelector(".entervalue");
 
 let ip = document.querySelector(".input");
 let arr = [];
+
 for(let i=0;i<allimages.length;i++){
     let image = allimages[i];
     image.addEventListener("click", ()=>{
@@ -20,20 +21,32 @@ for(let i=0;i<allimages.length;i++){
 }
 
 // submitbutton.addEventListener("click",()=>{
-    if(arr.length > 4){
-        document.getElementById("password").value = arr.toString();
-    }
+//     if(arr.length >= 4){
+//         document.getElementById("password").value = arr.toString();
+//     }
 //     console.log("clicked");
 // })
-function inputcheck(){
+
+function onSubmit(){
     // console.log("click");
     if(arr.length >= 4){
-        ip.value = arr.toString();
+        // ip.value = arr.toString();
+        document.getElementById("password").value = arr.join("");
+        document.getElementById("password2").value = arr.join("");
+
+        document.getElementById("form").submit();
+    }
+
+    else
+    {
+        alert("Please select atleast 4 images");
+        reset();
     }
     // console.log(arr.toString());
-    console.log(ip.value)
+    // console.log(ip.value)
 }
-function refresh(){
+
+function reset(){
     arr = [];
     console.log(arr);
     for(let i=0;i<allimages.length;i++){
